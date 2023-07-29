@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+body
+{
+background-image:url("images/F4.jpg");
+height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#aaa;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aaa;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aaa;color:#fff;background-color:#f38630;}
+.tg .tg-vfn0{background-color:#efefef;border-color:#000000;text-align:left;vertical-align:top}
+.tg .tg-a9a2{background-color:#c0c0c0;text-align:left;vertical-align:top}
+.tg .tg-auub{font-size:22px;font-family:"Arial Black", Gadget, sans-serif !important;;background-color:#00009b;color:#ffffff;text-align:left;vertical-align:top}
+.tg .tg-kftd{background-color:#efefef;text-align:left;vertical-align:top}
+.tg .tg-3mfi{font-size:22px;font-family:"Arial Black", Gadget, sans-serif !important;;background-color:#00009b;color:#ffffff;text-align:right;vertical-align:top}
+.tg .tg-bn95{font-size:22px;font-family:"Arial Black", Gadget, sans-serif !important;;background-color:#00009b;text-align:left;vertical-align:top}
+.tg .tg-4ako{font-family:"Times New Roman", Times, serif !important;;background-color:#efefef;border-color:#000000;text-align:left;vertical-align:top}
+.tg .tg-3mbx{background-color:#efefef;font-family:"Times New Roman", Times, serif !important;;border-color:#000000;text-align:left;vertical-align:top}
+.tg .tg-y6fn{background-color:#c0c0c0;text-align:left;vertical-align:top}
+.tg .tg-b6g2{background-color:#efefef;text-align:left;vertical-align:top}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+</style>
+</head>
+<body>
+
+<br>
+<center>
+<p style="font-family:georgia,garamond,serif;font-size:30px;font-style:italic;">SCHEDULE DETAILS</p>
+</center>
+<br>
+
+
+<br>
+<br>
+<center><div class="tg-wrap">
+<table class="tg">
+  <tr>
+    <th class="tg-auub">    User ID    </th>
+    <th class="tg-3mfi">   Source   </th>
+    <th class="tg-auub">  Destination  </th>
+    <th class="tg-auub">  Booking Date  </th>
+    <th class="tg-auub">  Flight Name  </th>
+    <th class="tg-auub">  Tickets  </th>
+    <th class="tg-bn95"> Price</th>
+  </tr>
+  <tr>
+    <td class="tg-4ako"></td>
+    <td class="tg-3mbx"></td>
+    <td class="tg-4ako"></td>
+    <td class="tg-3mbx"></td>
+    <td class="tg-4ako"></td>
+    <td class="tg-3mbx"></td>
+    <td class="tg-vfn0"></td>
+  </tr>
+  <tr>
+    <td class="tg-y6fn"></td>
+    <td class="tg-a9a2"></td>
+    <td class="tg-y6fn"></td>
+    <td class="tg-a9a2"></td>
+    <td class="tg-y6fn"></td>
+    <td class="tg-a9a2"></td>
+    <td class="tg-y6fn"></td>
+  </tr>
+  <tr>
+    <td class="tg-kftd"></td>
+    <td class="tg-b6g2"></td>
+    <td class="tg-kftd"></td>
+    <td class="tg-b6g2"></td>
+    <td class="tg-kftd"></td>
+    <td class="tg-b6g2"></td>
+    <td class="tg-kftd"></td>
+  </tr>
+  <tr>
+    <td class="tg-y6fn"></td>
+    <td class="tg-a9a2"></td>
+    <td class="tg-y6fn"></td>
+    <td class="tg-a9a2"></td>
+    <td class="tg-y6fn"></td>
+    <td class="tg-a9a2"></td>
+    <td class="tg-y6fn"></td>
+  </tr>
+  <tr>
+    <td class="tg-kftd"></td>
+    <td class="tg-b6g2"></td>
+    <td class="tg-kftd"></td>
+    <td class="tg-b6g2"></td>
+    <td class="tg-kftd"></td>
+    <td class="tg-b6g2"></td>
+    <td class="tg-kftd"></td>
+  </tr>
+</table></div></center>
+<br>
+<br>
+<br>
+<center>
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">ADD</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="schedule_try.html">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+    	<label for="user_id"><b>User ID:</b></label>
+      <input type="text" placeholder="Enter user id" name="user" required>
+    	
+    
+      <label for="Source"><b>Source:</b></label>
+      <input type="text" placeholder="Enter Source" name="source" required>
+
+     <label for="Destination"><b>Destination:</b></label>
+     <input type="text" placeholder="Enter Destination" name="destination" required>
+        
+        <label for="booking_date"><b>Booking Date:</b></label> <br> <br>
+      <input style="width:1040px;height:33px"  type="date" id="Date" placeholder="Enter booking date" name="booking_date" required>
+      <br>
+      <label for="flightname"><b>Flight name:</b></label>
+      <input type="text" placeholder="Enter Username" name="Flight name:" required>
+      
+      <label for="no_of_tickets"><b>No of Tickets:</b></label>
+     <input type="text" placeholder="Enter No of tickets" name="no_of_tickets" required>
+     
+       <label for="price"><b>Price:</b></label>
+     <input type="text" placeholder="Enter price" name="price" required>
+      
+      <button type="submit">ADD</button>
+     
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">DELETE</button>
+
+<div id="id02" class="modal">
+  
+  <form class="modal-content animate" action="schedule_try.html">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+       	<label for="user_id"><b>User ID:</b></label>
+      <input type="text" placeholder="Enter user id" name="user" required>
+    	
+<label for="booking_date"><b>Booking Date:</b></label> <br> <br>
+      <input style="width:1040px;height:33px"  type="date" id="Date" placeholder="Enter booking date" name="booking_date" required>
+     
+      <button type="submit">DELETE</button>
+     
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+
+
+<button type="button" class="btn" onclick="document.getElementById('id03').style.display='block'" style="width:auto;">MODIFY</button>
+
+<div id="id03" class="modal">
+  
+  <form class="modal-content animate" action="schedule_try.html">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+       	<label for="user_id"><b>User ID:</b></label>
+      <input type="text" placeholder="Enter user id" name="user" required>
+    	
+    
+      <label for="Source"><b>Source:</b></label>
+      <input type="text" placeholder="Enter Source" name="source" required>
+
+     <label for="Destination"><b>Destination:</b></label>
+     <input type="text" placeholder="Enter Destination" name="destination" required>
+        
+        <label for="booking_date"><b>Booking Date:</b></label> <br> <br>
+      <input style="width:1040px;height:33px"  type="date" id="Date" placeholder="Enter booking date" name="booking_date" required>
+      <br>
+      <label for="flightname"><b>Flight name:</b></label>
+      <input type="text" placeholder="Enter Username" name="Flight name:" required>
+      
+      <label for="no_of_tickets"><b>No of Tickets:</b></label>
+     <input type="text" placeholder="Enter No of tickets" name="no_of_tickets" required>
+     
+       <label for="price"><b>Price:</b></label>
+     <input type="text" placeholder="Enter price" name="price" required>
+      <button type="submit">MODIFY</button>
+     
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+</center>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+var modal = document.getElementById('id02');
+
+//When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+ if (event.target == modal) {
+     modal.style.display = "none";
+ }
+}
+
+var modal = document.getElementById('id03');
+
+//When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+if (event.target == modal) {
+   modal.style.display = "none";
+}
+}
+</script>
+
+</body>
+</html>
